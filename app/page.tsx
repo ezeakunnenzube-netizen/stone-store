@@ -11,6 +11,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Layers,
+  MapPin,
+  ExternalLink,
 } from "lucide-react";
 
 /**
@@ -417,6 +419,49 @@ export default function HomePage() {
                 <Layers size={14} />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* =========================================================================
+          SECTION 5: VISIT OUR YARD & SHOWROOM (GOOGLE MAP PREVIEW)
+          ========================================================================= */}
+      <section className="py-16 sm:py-24 bg-[#08080c] border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 border-b border-white/10 pb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#d4af37] font-mono mb-2">
+                <MapPin size={14} />
+                <span>Visit Our Showroom & Stone Yard</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-4xl font-normal tracking-tight text-white">
+                Agric-Coker Building Material Market
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-zinc-400 font-light">
+                Agric-Coker Building Material Market, Lagos, Nigeria • Inspect physical stone slabs, bookmatched bundles, and marble blocks in person.
+              </p>
+            </div>
+            <a
+              href="https://maps.google.com/maps?q=Agric-Coker+Building+Material+Market,+Lagos,+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-white/5 hover:bg-[#d4af37] border border-white/10 hover:border-[#d4af37] text-xs uppercase tracking-wider font-semibold text-zinc-200 hover:text-black transition-all shrink-0"
+            >
+              <span>Open in Google Maps</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          {/* Interactive Google Map Embed Frame */}
+          <div className="relative w-full h-[380px] sm:h-[450px] lg:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.8)] bg-[#0f0f14] group">
+            <iframe
+              src="https://maps.google.com/maps?q=Agric-Coker+Building+Material+Market,+Lagos,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Sonic Stone Location - Agric-Coker Building Material Market, Lagos"
+              className="w-full h-full border-0 filter contrast-[1.05] brightness-[0.95]"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
